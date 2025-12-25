@@ -9,5 +9,4 @@ public class FinSightAnalyticsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FinSightAnalyticsApplication.class, args);
 	}
-
 }
