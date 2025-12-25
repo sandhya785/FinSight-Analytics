@@ -11,14 +11,14 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class TransactionRequestDTO {
-    @NotNull
-    @Positive
+    @NotNull(message = "Amount is required")
+    @Positive(message = "Amount should be positive")
     private BigDecimal amount;
-    @NotNull
+    @NotNull(message = "Transaction type is required")
     private TransactionType type;
-    @NotBlank
+    @NotBlank(message = "category cannot be empty")
     private String category;
-    @NotNull
+    @NotNull(message = "transaction date is required")
     private LocalDate transactionDate;
 
     // getters and setters

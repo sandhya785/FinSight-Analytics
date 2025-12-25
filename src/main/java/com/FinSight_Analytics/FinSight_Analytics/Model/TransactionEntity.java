@@ -2,9 +2,10 @@ package com.FinSight_Analytics.FinSight_Analytics.Model;
 import com.FinSight_Analytics.FinSight_Analytics.Enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NonNull;
+
 import lombok.Setter;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotNull;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -20,8 +21,7 @@ public class TransactionEntity {
     private Long id;
 
     @Column(nullable = false, precision = 12, scale = 2)
-    @NonNull
-
+    @NotNull
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
